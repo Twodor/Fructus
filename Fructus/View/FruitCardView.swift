@@ -23,6 +23,7 @@ struct FruitCardView: View
     
 
     var body: some View {
+        ZStack{
         VStack(spacing:20)
         {
             //FRUIT: IMAGE
@@ -33,11 +34,26 @@ struct FruitCardView: View
             //FRUIT: TITLE
             
             Text("Blueberry")
+                .foregroundColor(Color.white)
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .shadow(color: Color(red:0, green:0, blue: 0,
+                                     opacity: 0.15), radius: 2, x:2, y: 2)
             //FRUIT: HEADLINE
             //BUTTON:START
             
         }//: VSTACK
+        }//:ZTACK
+        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,   maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,  maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        .background(LinearGradient(gradient: Gradient(colors:[Color("ColorBlueberryLight"),
+        Color("ColorBlueberryDark")]), startPoint: .top, endPoint: .bottom))
+        .cornerRadius(20)
+        .padding(.horizontal, 20)
+            
+        
+   
     }
 }
 
